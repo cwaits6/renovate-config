@@ -21,11 +21,20 @@
       "automerge": true
     },
     {
-      "description": "Group all non-major GitHub Actions updates",
+      "description": "Group minor and patch GitHub Actions updates, use ci commit type to avoid version bumps",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "GitHub Actions",
+      "semanticCommitType": "ci",
       "automerge": true
+    },
+    {
+      "description": "Group major GitHub Actions updates, use ci commit type to avoid version bumps",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "GitHub Actions (major)",
+      "semanticCommitType": "ci",
+      "automerge": false
     },
     {
       "description": "Require manual review for major updates",
