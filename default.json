@@ -2,10 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "schedule:weekdays",
     ":semanticCommits",
     ":dependencyDashboard"
   ],
+  "schedule": ["before 6am every day"],
   "timezone": "America/New_York",
   "labels": ["dependencies"],
   "packageRules": [
