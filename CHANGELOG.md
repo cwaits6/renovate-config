@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/cwaits6/renovate-config/compare/v1.0.1...v1.0.2) (2026-03-15)
+
+
+### Bug Fixes
+
+* merge all minor and patch updates automatically ([033d7eb](https://github.com/cwaits6/renovate-config/commit/033d7eb2a5a1473b9c01a0b816da43c9cc1b452c))
+
 ## [1.0.1](https://github.com/cwaits6/renovate-config/compare/v1.0.0...v1.0.1) (2026-03-08)
 
 
