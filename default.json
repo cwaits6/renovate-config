@@ -10,14 +10,8 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "description": "Automerge patch updates",
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
-    },
-    {
-      "description": "Automerge devDependency minor updates",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor"],
+      "description": "Automerge minor and patch updates",
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
     {
