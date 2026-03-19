@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/cwaits6/renovate-config/compare/v1.1.0...v1.1.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* use recursive regex to scope APK matching to apk add blocks ([#3](https://github.com/cwaits6/renovate-config/issues/3)) ([1268603](https://github.com/cwaits6/renovate-config/commit/1268603ccf606a499d6fb62a960e49f6edd08360))
+
 # [1.1.0](https://github.com/cwaits6/renovate-config/compare/v1.0.2...v1.1.0) (2026-03-18)
 
 
