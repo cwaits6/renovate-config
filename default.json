@@ -47,8 +47,10 @@
     {
       "customType": "regex",
       "fileMatch": ["(^|/)Dockerfile[^/]*$"],
+      "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "apk add[^\\n]*?\\s(?<depName>[a-zA-Z0-9][a-zA-Z0-9_.+\\-]*)=(?<currentValue>[^\\s]+)"
+        "apk\\s+add[^\\n\\\\]*(?:\\\\[^\\S\\n]*\\n[^\\n\\\\]*)*",
+        "(?<depName>[a-zA-Z0-9][a-zA-Z0-9._+-]*)=(?<currentValue>\\d+[^\\s\\\\]+)"
       ],
       "datasourceTemplate": "custom.apk-wolfi",
       "versioningTemplate": "loose"
