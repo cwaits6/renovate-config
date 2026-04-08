@@ -5,7 +5,7 @@
     ":semanticCommits",
     ":dependencyDashboard"
   ],
-  "schedule": ["before 6am every day"],
+  "schedule": ["at any time"],
   "timezone": "America/New_York",
   "labels": ["dependencies"],
   "packageRules": [
@@ -37,6 +37,15 @@
       "labels": ["dependencies", "major"]
     }
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "automerge": true,
+    "automergeSchedule": ["before 6am on Monday"],
+    "commitMessageAction": "lock file maintenance",
+    "semanticCommitType": "chore",
+    "semanticCommitScope": "deps"
+  },
   "customDatasources": {
     "apk-wolfi": {
       "defaultRegistryUrlTemplate": "https://cwaits6.github.io/apk-datasource/x86_64/{{packageName}}.json",
