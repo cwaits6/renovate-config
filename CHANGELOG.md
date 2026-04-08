@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/cwaits6/renovate-config/compare/v1.1.1...v1.2.0) (2026-04-08)
+
+
+### Features
+
+* update schedule to any time and add lock file maintenance ([#4](https://github.com/cwaits6/renovate-config/issues/4)) ([71ca6f2](https://github.com/cwaits6/renovate-config/commit/71ca6f275f45294eaca5b9b3de2709a83eb4e1c4))
+
 ## [1.1.1](https://github.com/cwaits6/renovate-config/compare/v1.1.0...v1.1.1) (2026-03-19)
 
 
