@@ -10,8 +10,14 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
+      "description": "Require 3 days before updating",
+      "minimumReleaseAge": "3 days"
+    },
+    {
       "description": "Automerge minor and patch updates",
       "matchUpdateTypes": ["minor", "patch"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
       "automerge": true
     },
     {
@@ -39,12 +45,9 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["at any time"],
     "automerge": true,
-    "automergeSchedule": ["before 6am on Monday"],
     "commitMessageAction": "lock file maintenance",
-    "semanticCommitType": "chore",
-    "semanticCommitScope": "deps"
+    "semanticCommitType": "chore"
   },
   "customDatasources": {
     "apk-wolfi": {
