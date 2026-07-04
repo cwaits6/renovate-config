@@ -1,51 +1,17 @@
 # renovate-config
 
-Shared [Renovate](https://docs.renovatebot.com/) configuration preset for [`cwaits6`](https://github.com/cwaits6) repos.
+**Moved.** The shared Renovate preset now lives at [krypsis-io/renovate-config](https://github.com/krypsis-io/renovate-config).
 
-## Usage
+This repo's `default.json` is a shim that extends the krypsis-io preset, so:
 
-Add a `renovate.json` to any repo:
+- repos still extending `github>cwaits6/renovate-config` keep working and get the krypsis-io rules
+- new `cwaits6` personal repos onboarded by Renovate (which auto-detects this repo) land on the krypsis-io preset too
 
-```json
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>cwaits6/renovate-config"]
-}
-```
-
-That's it. All rules from this repo's `default.json` apply automatically.
-
-## What's included
-
-- **Base**: `config:recommended` — dependency dashboard, monorepo grouping, rate limiting
-- **Schedule**: weekdays only (America/New_York)
-- **Semantic commits**: PR titles follow conventional commit format, compatible with semantic-release
-- **Labels**: all Renovate PRs get a `dependencies` label
-
-### Automerge rules
-
-| Update type | Scope | Automerge |
-|---|---|---|
-| `patch` | all | yes |
-| `minor` | devDependencies | yes |
-| `minor` / `patch` | GitHub Actions | yes (grouped) |
-| `major` | all | no — manual review required |
-
-## Customizing per repo
-
-To override a rule in a specific repo, add `packageRules` in that repo's `renovate.json`:
+For new repos, prefer extending the source of truth directly:
 
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>cwaits6/renovate-config"],
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor"],
-      "automerge": false
-    }
-  ]
+  "extends": ["github>krypsis-io/renovate-config"]
 }
 ```
-
-Per-repo rules merge with and can override the shared config.
